@@ -54,14 +54,13 @@ Quando LLDP, CDP, VLANs ou MACs não estiverem disponíveis no Zabbix, o Farol d
 - o token do Zabbix deve ter somente permissões de leitura;
 - o Zabbix Play pertence apenas ao ambiente de desenvolvimento.
 
-## Licença e marca
+## Licença
 
 O código é distribuído sob a [Apache License 2.0](LICENSE). A documentação é
 distribuída sob a [Creative Commons BY 4.0](LICENSE-DOCS.md).
 
-O nome Farol, seus logotipos e sua identidade visual são marcas reservadas.
-Consulte [TRADEMARKS.md](TRADEMARKS.md) para regras de uso em forks e produtos
-derivados. Dependências de terceiros permanecem sujeitas às suas próprias
+Os exemplos visuais e nomes fictícios usados na documentação têm finalidade
+ilustrativa. Dependências de terceiros permanecem sujeitas às suas próprias
 licenças.
 
 Implantação, suporte, treinamento, consultoria, customizações e integrações
