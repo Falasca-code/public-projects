@@ -24,6 +24,7 @@ O Farol consome exclusivamente informações já coletadas pelo Zabbix através 
 - [Branding por cliente](docs/deployment/branding.md)
 - [Versionamento e rollback](docs/deployment/versioning.md)
 - [Roadmap futuro](docs/deployment/roadmap.md)
+- [Security baseline and review](SECURITY.md)
 
 ## Instalação rápida
 
@@ -49,7 +50,7 @@ Quando LLDP, CDP, VLANs ou MACs não estiverem disponíveis no Zabbix, o Farol d
 
 - nenhum segredo deve ser versionado;
 - PostgreSQL deve permanecer em rede interna;
-- produção deve usar HTTPS;
+- a camada de publicação deve aplicar HTTPS quando requerido pela política do cliente;
 - imagens e releases devem ser versionadas;
 - o token do Zabbix deve ter somente permissões de leitura;
 - o Zabbix Play pertence apenas ao ambiente de desenvolvimento.

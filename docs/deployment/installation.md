@@ -8,7 +8,7 @@ existente e acessível pela API.
 
 - Servidor Linux 64-bit, preferencialmente Debian estável ou Ubuntu Server LTS.
 - Docker Engine e Docker Compose v2.
-- DNS e certificado TLS definidos.
+- uma camada de publicação escolhida pelo cliente (opcional em ambiente controlado);
 - Pelo menos 2 vCPU, 4 GB RAM e 20 GB livres. Recomendado: 4 vCPU, 8 GB RAM e 50 GB.
 - URL da API do Zabbix e token com permissão somente leitura.
 - Comunicação de saída do backend para o Zabbix liberada.
@@ -44,7 +44,7 @@ Preencha obrigatoriamente:
 
 ```dotenv
 APP_VERSION=1.0.0
-APP_URL=https://plataforma.cliente.example
+APP_URL=http://farol.internal.example
 ZABBIX_URL=https://zabbix.cliente.example/api_jsonrpc.php
 ZABBIX_TOKEN=<token-read-only>
 POSTGRES_PASSWORD=<segredo-forte>
@@ -80,8 +80,8 @@ não deve aparecer nessa stack.
 
 ## 6. Primeiro acesso
 
-1. Abra `APP_URL` no navegador.
-2. Confirme o certificado TLS e o domínio.
+1. Abra `APP_URL` no navegador, ou o endereço definido na camada de publicação do cliente.
+2. Se houver publicação externa, confirme o TLS, domínio e controles definidos pelo cliente.
 3. Entre com `FAROL_ADMIN_USER` e `FAROL_ADMIN_PASSWORD`.
 4. Abra **Conexão Zabbix** e confirme estado conectado e versão detectada.
 5. Abra **Dispositivos** e confirme que os hosts vêm do Zabbix corporativo.
@@ -140,4 +140,3 @@ docker compose -f deploy/docker-compose.yml up -d
 ```
 
 Não remova volumes PostgreSQL durante rollback.
-
